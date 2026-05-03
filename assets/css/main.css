@@ -778,10 +778,10 @@ section,
 
 .hero .carousel-text {
   position: absolute;
-  top: 10%;             /* Sticks text to the top edge */
+  top: 10%;            
   left: 0;
   width: 100%;
-  text-align: center; /* Optional: centers the text horizontally */
+  text-align: center; 
 }
 
 .hero .carousel-container-lc {
@@ -910,6 +910,15 @@ section,
   }
 }
 
+@media(max-width:768px) {
+  .hero .carousel-text {
+    position: absolute;
+    top: 50%;             
+    left: 0;
+    width: 100%;
+    text-align: center; 
+  }
+}
 
 .hero .hero-waves {
   display: block;
