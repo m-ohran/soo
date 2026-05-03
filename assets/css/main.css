@@ -288,6 +288,22 @@ h6 {
   }
 }
 
+.discord-btn {
+ /* background-color: #5865F2; /* Discord's signature color */
+  color: #5865F2;
+ /* padding: 10px 20px;
+  text-decoration: none;
+  /*border-radius: 5px;*/
+  display: flex;
+  align-items: center;
+ /* gap: 8px; /* Space between icon and text */
+  /*transition: background-color 0.3s ease;*/
+}
+
+.discord-btn:hover {
+  background-color: #4752C4; /* Darker shade for hover effect */
+}
+
 /* Navmenu - Mobile */
 @media (max-width: 1199px) {
   .mobile-nav-toggle {
@@ -664,6 +680,46 @@ section,
   font-family: var(--heading-font);
 }
 
+
+/*--------------------------------------------------------------
+# series Section Titles
+--------------------------------------------------------------*/
+.section-title-series {
+  padding-top: 20px;
+  padding-bottom: 60px;
+  position: relative;
+}
+
+.section-title-series h2 {
+  font-size: 14px;
+  font-weight: 500;
+  padding: 0;
+  line-height: 1px;
+  margin: 0;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: color-mix(in srgb, var(--default-color), transparent 50%);
+  position: relative;
+}
+
+.section-title-series h2::after {
+  content: "";
+  width: 120px;
+  height: 1px;
+  display: inline-block;
+  background: var(--accent-color);
+  margin: 4px 10px;
+}
+
+.section-title-series p {
+  color: var(--heading-color);
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: var(--heading-font);
+}
+
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
@@ -688,6 +744,86 @@ section,
   position: relative;
   min-height: 75vh;
   padding-top: 60px;
+}
+
+.hero .carousel-container-cw {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  position: relative;
+  min-height: 75vh;
+  padding-top: 60px;
+  background-image: url('../img/banners/canonwalkers.png');
+  background-size: 900px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero .series-carousel-container-cw {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  position: absolute;
+  min-height: 75vh;
+  padding-top: 60px;
+  background-image: url('../img/banners/canonwalkers.png');
+  background-size: 900px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero .carousel-text {
+  position: absolute;
+  top: 10%;             /* Sticks text to the top edge */
+  left: 0;
+  width: 100%;
+  text-align: center; /* Optional: centers the text horizontally */
+}
+
+.hero .carousel-container-lc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  position: relative;
+  min-height: 75vh;
+  padding-top: 60px;
+  background-image: url('../img/banners/loosecanons.png');
+  background-size: 900px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+.hero .carousel-container-co {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  position: relative;
+  min-height: 75vh;
+  padding-top: 60px;
+  background-image: url('../img/banners/complicatedopportunities.jpg');
+  background-size: 650px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero .about-carousel-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  position: relative;
+  min-height: 45vh;
+  padding-top: 40px;
 }
 
 .hero h2 {
@@ -787,6 +923,20 @@ section,
   animation: move-forever3 6s linear infinite;
   animation-delay: -2s;
   fill: var(--default-color);
+}
+
+.hero .wave1-cw use {
+  animation: move-forever1 10s linear infinite;
+  animation-delay: -2s;
+  fill: #FFA500;
+  opacity: 0.6;
+}
+
+.hero .wave1-lc use {
+  animation: move-forever1 10s linear infinite;
+  animation-delay: -2s;
+  fill: #30004A;
+  opacity: 0.6;
 }
 
 @keyframes move-forever1 {
@@ -2557,4 +2707,54 @@ section,
   padding-left: 5px;
   color: color-mix(in srgb, var(--default-color), transparent 60%);
   font-size: 14px;
+}
+
+/*--------------------------------------------------------------
+# Image Flip
+--------------------------------------------------------------*/
+
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  /*border: 1px solid #f1f1f1;*/
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: black;
+  color: white;
+  transform: rotateY(180deg);
 }
