@@ -910,6 +910,30 @@ section,
   }
 }
 
+@media (max-width: 768px) {
+  .hero .carousel-container-lc {
+    min-height: 90vh;
+    background-size: contain;          
+    background-position: center;
+  }
+
+  .hero h2 {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero .carousel-container-co {
+    min-height: 90vh;
+    background-size: contain;          
+    background-position: center;
+  }
+
+  .hero h2 {
+    font-size: 28px;
+  }
+}
+
 @media(max-width:768px) {
   .hero .carousel-text {
     position: absolute;
