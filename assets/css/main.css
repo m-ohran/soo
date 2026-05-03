@@ -756,7 +756,7 @@ section,
   min-height: 75vh;
   padding-top: 60px;
   background-image: url('../img/banners/canonwalkers.png');
-  background-size: 900px;
+  background-size: 120vh;
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -794,7 +794,7 @@ section,
   min-height: 75vh;
   padding-top: 60px;
   background-image: url('../img/banners/loosecanons.png');
-  background-size: 900px;
+  background-size: 120vh;
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -810,7 +810,7 @@ section,
   min-height: 75vh;
   padding-top: 60px;
   background-image: url('../img/banners/complicatedopportunities.jpg');
-  background-size: 650px;
+  background-size: 86vh;
   background-position: center;
   background-repeat: no-repeat;
 }
