@@ -913,7 +913,7 @@ section,
 @media(max-width:768px) {
   .hero .carousel-text {
     position: absolute;
-    top: 50%;             
+    top: 30%;             
     left: 0;
     width: 100%;
     text-align: center; 
