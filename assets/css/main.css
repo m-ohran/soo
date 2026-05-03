@@ -756,7 +756,7 @@ section,
   min-height: 75vh;
   padding-top: 60px;
   background-image: url('../img/banners/canonwalkers.png');
-  background-size: 120vh;
+  background-size: 900px;
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -810,7 +810,7 @@ section,
   min-height: 75vh;
   padding-top: 60px;
   background-image: url('../img/banners/complicatedopportunities.jpg');
-  background-size: 86vh;
+  background-size: 670px;
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -897,6 +897,19 @@ section,
     font-size: 28px;
   }
 }
+
+@media (max-width: 768px) {
+  .hero .carousel-container-cw {
+    min-height: 90vh;
+    background-size: contain;          
+    background-position: center;
+  }
+
+  .hero h2 {
+    font-size: 28px;
+  }
+}
+
 
 .hero .hero-waves {
   display: block;
