@@ -794,7 +794,7 @@ section,
   min-height: 75vh;
   padding-top: 60px;
   background-image: url('../img/banners/loosecanons.png');
-  background-size: 120vh;
+  background-size: 900px;
   background-position: center;
   background-repeat: no-repeat;
 }
