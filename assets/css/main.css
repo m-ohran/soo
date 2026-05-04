@@ -725,7 +725,7 @@ section,
 --------------------------------------------------------------*/
 .hero {
   width: 100%;
-  overflow: hidden;
+  overflow: auto;
   position: relative;
   background: linear-gradient(0deg, var(--background-color) 0%, color-mix(in srgb, var(--background-color) 90%, white 10%) 100%);
   padding: 0;
