@@ -761,7 +761,7 @@ section,
   position: relative;
   min-height: 75vh;
   padding-top: 60px;
-  background-image: url('../img/banners/canonwalkers.png');
+  background-image: url('../img/banners/canonwalkers.webp');
   background-size: 900px;
   background-position: center;
   background-repeat: no-repeat;
@@ -777,14 +777,6 @@ section,
   text-align: center; 
 }
 
-.hero .carousel-text-ec {
-  position: absolute;
-  
-  left: 0;
-  width: 100%;
-  text-align: center; 
-}
-
 .hero .carousel-container-lc {
   display: flex;
   justify-content: center;
@@ -794,7 +786,7 @@ section,
   position: relative;
   min-height: 75vh;
   padding-top: 60px;
-  background-image: url('../img/banners/loosecanons.png');
+  background-image: url('../img/banners/loosecanons.webp');
   background-size: 900px;
   background-position: center;
   background-repeat: no-repeat;
@@ -810,9 +802,9 @@ section,
   position: relative;
   min-height: 75vh;
   padding-top: 60px;
-  background-image: url('../img/banners/complicatedopportunities.jpg');
-  background-size: 670px;
-  background-position: center;
+  background-image: url('../img/banners/complicatedopportunities.webp');
+  background-size: 800px;
+  background-position: 50% 90%;
   background-repeat: no-repeat;
 }
 
@@ -825,10 +817,34 @@ section,
   position: relative;
   min-height: 75vh;
   padding-top: 60px;
-  background-image: url('../img/banners/soo_logo_main.png');
+  background-image: url('../img/banners/logo_text.png');
   background-size: 570px;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+.hero .carousel-container-ec {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  position: relative;
+  min-height: 75vh;
+  padding-top: 60px;
+  background-image: url('../img/banners/logo_notext.png');
+  background-size: 555px;
+  background-position: 50% 90%;
+  background-repeat: no-repeat;
+}
+
+.hero .carousel-text-ec {
+  position: absolute;
+  top:39%;
+  left: 0;
+  width: 100%;
+  text-align: center; 
+  font-size:clamp(3rem,20vw,7rem);
 }
 
 .hero .about-carousel-container {
@@ -952,6 +968,18 @@ section,
 
 @media (max-width: 768px) {
   .hero .carousel-container-soo {
+    min-height: 90vh;
+    background-size: contain;          
+    background-position: center;
+  }
+
+  .hero h2 {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero .carousel-container-ec {
     min-height: 90vh;
     background-size: contain;          
     background-position: center;
@@ -2847,7 +2875,7 @@ section,
 
 /* Style the front side (fallback if image is missing) */
 .flip-card-front {
-  background-color: #bbb;
+  background-color: var(--background-color);
   color: black;
 }
 
@@ -2856,6 +2884,8 @@ section,
   background-color: black;
   color: white;
   transform: rotateY(180deg);
+  overflow: auto;
+  padding: 5px;
 }
 
 
