@@ -759,6 +759,8 @@ section,
   font-family: var(--heading-font);
 }
 
+
+
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
@@ -879,6 +881,11 @@ section,
   width: 100%;
   text-align: center; 
   font-size:clamp(3rem,20vw,7rem);
+  font-weight: 700;
+  -webkit-text-stroke: 2px #6A7891;
+  text-shadow:
+    0 2px 3px rgba(0,0,0,0.7);
+  forced-color-adjust: none;
 }
 
 .hero .about-carousel-container {
@@ -1442,7 +1449,7 @@ section,
 }
 
 .cw-link { 
-  color: #FFA500; 
+  color: #FFA500;
   
 } 
 
@@ -1456,21 +1463,30 @@ section,
   
 } 
 
-.lc-link:hover { color:color-mix(in srgb, var(--accent-color), transparent 30%); }
-
-.co-link {
-  color:blue; 
+.lc-link:hover { 
+  color:color-mix(in srgb, var(--accent-color), transparent 30%); 
   
 }
 
-.co-link:hover { color:color-mix(in srgb, var(--accent-color), transparent 30%); }
+.co-link {
+  color:#1A4A80; 
+  
+}
+
+.co-link:hover {
+  color:color-mix(in srgb, var(--accent-color), transparent 30%); 
+  
+}
 
 .soo-link {
   color:var(--default-color); 
   
 }
 
-.soo-link:hover { color:color-mix(in srgb, var(--accent-color), transparent 30%); }
+.soo-link:hover {
+  color:color-mix(in srgb, var(--accent-color), transparent 30%); 
+  
+}
 
 /*--------------------------------------------------------------
 # Testimonials Section
