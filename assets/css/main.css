@@ -19,12 +19,30 @@
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root { 
-  --background-color: #ffffff; /* Background color for the entire website, including individual sections */
-  --default-color: #444444; /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #2a2c39; /* Color for headings, subheadings and title throughout the website */
+  --background-color: #121212; /* Background color for the entire website, including individual sections */
+  --default-color: #ffffff; /* Default color used for the majority of the text content across the entire website */
+  --heading-color: #ffffff; /* Color for headings, subheadings and title throughout the website */
   --accent-color: hsl(213, 67% ,21%); /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
-  --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
+  --surface-color: #121212; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: #121212;
+    --default-color:#ffffff;
+    --heading-color: #ffffff;
+    --surface-color:#121212;
+  }
+} 
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --background-color: #ffffff;
+    --default-color:#444444;
+    --heading-color: #2a2c39;
+    --surface-color:#ffffff;
+  }
 }
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
@@ -2876,7 +2894,7 @@ section,
 
 /* Style the front side (fallback if image is missing) */
 .flip-card-front {
-  background-color: #bbb;
+  background-color: var(--background-color);
   color: black;
 }
 
